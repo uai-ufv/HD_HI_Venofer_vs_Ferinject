@@ -3923,7 +3923,24 @@ vertical-align: -.125em;
   
 
 
-</header><script src="../old/old_main.js"></script><div class="centrado">
+</header><script>(function () {
+  const PASSWORD = atob("ZmVycml0aW5h");
+  /* const KEY = "auth_" + location.pathname; */
+  const KEY = "auth_ok"
+
+  if (sessionStorage.getItem(KEY) === "true") return;
+
+  const user = prompt("Introduce la contraseña:");
+
+  if (user !== PASSWORD) {
+    document.documentElement.innerHTML = "<h2>Acceso denegado</h2>";
+    throw new Error("Unauthorized");
+  }
+
+  sessionStorage.setItem(KEY, "true");
+  /* localStorage.setItem(KEY, "true"); */
+})();
+</script><div class="centrado">
 <p><b>Stakeholder:</b> Jose L Merino Rivas <b>Centro:</b> Hospital del Henares <br><strong>Fecha última modificación:</strong> 08 marzo 2026</p>
 </div>
 <section id="input" class="level2"><h2 class="anchored" data-anchor-id="input">Input</h2>
