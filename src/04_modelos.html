@@ -3997,6 +3997,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../src/01_tiempo_hasta_estudio.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tiempo hasta el inicio del estudio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../src/02_Ferritina.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ferritina</span></a>
   </div>
 </li>
@@ -4071,7 +4076,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">19 marzo 2026</p>
+      <p class="date">22 marzo 2026</p>
     </div>
   </div>
   
@@ -4080,7 +4085,27 @@ window.Quarto = {
   
 
 
-</header><!-- <script src="../old/old_main.js"></script> --><!-- <div class="centrado"> --><!-- <b>Stakeholder:</b> Jose L Merino Rivas <b>Centro:</b> Hospital del Henares <br> **Fecha última modificación:** 19 marzo 2026   --><!-- </div> --><section id="data-modelos" class="level2"><h2 class="anchored" data-anchor-id="data-modelos">Data modelos</h2>
+</header><script>(function () {
+  const PASSWORD = atob("ZmVycml0aW5h");
+  /* const KEY = "auth_" + location.pathname; */
+  const KEY = "auth_ok"
+
+  if (sessionStorage.getItem(KEY) === "true") return;
+
+  const user = prompt("Introduce la contraseña:");
+
+  if (user !== PASSWORD) {
+    document.documentElement.innerHTML = "<h2>Acceso denegado</h2>";
+    throw new Error("Unauthorized");
+  }
+
+  sessionStorage.setItem(KEY, "true");
+  /* localStorage.setItem(KEY, "true"); */
+})();
+</script><div class="centrado">
+<p><b>Stakeholder:</b> Jose L Merino Rivas <b>Centro:</b> Hospital del Henares <br><strong>Fecha última modificación:</strong> 22 marzo 2026</p>
+</div>
+<section id="data-modelos" class="level2"><h2 class="anchored" data-anchor-id="data-modelos">Data modelos</h2>
 <section id="ejemplo" class="level3"><h3 class="anchored" data-anchor-id="ejemplo">Ejemplo</h3>
 <div class="cell" data-collapase="true">
 <div class="cell-output cell-output-stdout">
@@ -4399,7 +4424,7 @@ Advertencia
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Quito el outlier id_paciente=53, validarlo con Jose Luis.</p>
+<p>Quito el outlier id_paciente=c(26,53), validarlo con Jose Luis.</p>
 </div>
 </div>
 <div class="cell">
