@@ -1,17 +1,30 @@
 project:
   type: book
-  output-dir: ../outputs
-
+  output-dir: outputs
 
 book:
   page-navigation: false
   chapters:
     - index.qmd
-    - 01_descriptivo.qmd
-    # - 01_sdfsdfsfd.qmd
-    - 02_Ferritina.qmd
-    - 02_Hemogoblina.qmd
-    - 03_similitud_pacientes.qmd
+    - src/01_descriptivo.qmd
+    - src/01_tiempo_hasta_estudio.qmd
+    - src/02_Ferritina.qmd
+    - src/02_Hemogoblina.qmd
+    - src/03_similitud_pacientes.qmd
+    - src/04_modelos.qmd
+  # navbar:
+  #   left:
+  #     - href: https://www.ufv.es/
+  #       image: images/logo.jpg
+        # aria-label: "Página UFV"
+    # right:
+    #   - icon: envelope
+    #     href: "mailto:investiga.medicina@ufv.es"
+  # sidebar:
+  #   tools:
+  #     - text: "Contacto"
+  #       icon: envelope
+  #       href: "mailto:investiga.medicina@ufv.es"
   page-footer:
     center: 
       - text: "UFV"
@@ -30,10 +43,6 @@ format:
     code-fold: false
     number-sections: false
     self-contained: true
-    author: 
-    - name: "Unidad de Apoyo a la Investigación"
-      # affiliation: "Facultad de Medicina, Universidad Francisco de Vitoria"
-    date: "02-28-2026" # Fecha fija del mes de febrero de 2026
     date-format: "MMMM YYYY"
     grid:
       sidebar-width: 200px
